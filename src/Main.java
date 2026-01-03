@@ -1,15 +1,29 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.Scanner;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+public class Main {
+    public static void main(String[] args){
+
+        Scanner Prohibited = new Scanner(System.in);
+
+        System.out.println("Informe o número: ");
+        double num1 = Prohibited.nextDouble();
+
+        System.out.println("Informe o número: ");
+        double num2 = Prohibited.nextDouble();
+
+        System.out.println("Informe a operação: ");
+        String op = Prohibited.next();
+
+        double RESULT = "+".equals(op) ? num1 + num2 : 0;
+
+        RESULT = "-".equals(op) ? num1 - num2 : RESULT;
+        RESULT = "*".equals(op) ? num1 * num2 : RESULT;
+        RESULT = "/".equals(op) ? num1 / num2 : RESULT;
+        RESULT = "%".equals(op) ? num1 % num2 : RESULT;
+
+        System.out.printf("%.2f %s %.2f = %.2f", num1, op, num2, RESULT);
+
+        Prohibited.close();
+
     }
 }
