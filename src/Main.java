@@ -5,13 +5,13 @@ public class Main {
 
         Scanner Prohibited = new Scanner(System.in);
 
-        System.out.println("Informe o número: ");
+        System.out.println(""Enter a number": ");
         double num1 = Prohibited.nextDouble();
 
-        System.out.println("Informe o número: ");
+        System.out.println(""Enter a number": ");
         double num2 = Prohibited.nextDouble();
 
-        System.out.println("Informe a operação: ");
+        System.out.println("inform the operation: ");
         String op = Prohibited.next();
 
         double RESULT = "+".equals(op) ? num1 + num2 : 0;
